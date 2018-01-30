@@ -31,6 +31,13 @@ public class AopServiceImpl implements AopService {
 
     @Override
     public void excp() {
-        throw new NullPointerException("测试异常");
+        try{
+            System.out.println(1/0);
+        }catch (Exception e){
+            e.printStackTrace();
+            throw new RuntimeException("测试异常");
+        }
+        System.out.println("===============excep end ==============");
+
     }
 }
