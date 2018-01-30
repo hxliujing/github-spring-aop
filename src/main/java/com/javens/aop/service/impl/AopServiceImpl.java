@@ -28,4 +28,9 @@ public class AopServiceImpl implements AopService {
         AopPrintUtil.print(AopEnum.FIND,id);
         return null;
     }
+
+    @Override
+    public void excp() {
+        throw new NullPointerException("测试异常");
+    }
 }
