@@ -1,7 +1,6 @@
 package com.javens.aop;
 
 import com.javens.aop.service.AopService;
-import com.javens.aop.util.SpringContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.support.GenericXmlApplicationContext;
@@ -18,9 +17,6 @@ public class Application {
         } catch (Exception e) {
             logger.error("== Application context start error:{}", e.getMessage());
         }
-
-       /* AopService aopService = SpringContext.getBean(AopService.class);
-        aopService.save(null);*/
 
         synchronized (Application.class) {
             while (true) {

@@ -17,6 +17,9 @@ public class AopEntity {
     }
 
     public void setName(String name) {
+        System.out.println("====change====="+name);
         this.name = name;
     }
+
+    private void test(){}
 }
